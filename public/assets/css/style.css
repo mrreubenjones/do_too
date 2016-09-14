@@ -1,0 +1,169 @@
+* { border: 0px solid #000; }
+
+body {
+  font: normal 16px Arimo;
+  color: #666;
+  text-align: left;
+}
+
+.container {
+  max-width: 800px;
+  min-width: 320px;
+  padding-bottom: 100px;
+}
+
+/* Header */
+.brand {
+  overflow: auto;
+  min-width: 230px;
+}
+
+.brand img {
+  float: left;
+  height: 40px;
+}
+
+.logo {
+  float: left;
+  font-size: 30px;
+  color: #333;
+  margin: 5px 0 0 10px;
+}
+
+/*                             */
+
+#add {
+  margin: 40px 0;
+  text-align: center;
+}
+
+#add .form-control {
+  width: 60%;
+  margin: 0 0 0 auto;
+}
+
+#add input {
+  display:inline-block;
+}
+
+#welcome {
+  margin: 40px 0;
+  padding: 0 20%;
+  text-align: center;
+}
+
+#welcome img{
+  width: 50px;
+}
+
+h2.section-header {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #A99F96;
+  padding: 15px;
+}
+
+
+.btn-task {
+  background-color: #666;
+  border-color: #555;
+  width: 20%;
+  margin: 0 auto 0 10px;
+}
+
+.btn-task:hover {
+  background-color: #444;
+  border-color: #444;
+}
+
+.task-list {
+  overflow: auto;
+  padding: 10px;
+  border-bottom: solid 1px #eee;
+}
+
+.task-list:last-of-type {
+	border-bottom: 0px solid #eee;
+}
+
+.task {
+  float: left;
+  padding: 10px 10px 10px 0;
+  line-height: 18px;
+}
+
+.btn-delete {
+  float: left;
+  color: #ddd;
+  background-color: #fff;
+  border: 0px solid #fff;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  outline: none;
+}
+
+.btn-delete:hover {
+  color: #999;
+}
+
+.btn-complete {
+  float: right;
+  font-size: 16px;
+  margin: 2px 0 0 10px;
+  color: #aaa;
+  padding: 0;
+  line-height: 36px;
+  outline: none;
+}
+
+.btn-complete:hover {
+  color: #444;
+}
+
+/*
+article {
+	border: 1px solid #eee;
+	border-top: none;
+	padding: 15px 10px;
+}
+
+article:first-of-type {
+	border: 1px solid #eee;
+}
+
+article:nth-child(even) {
+	background: #fafafa;
+}
+
+article.complete {
+	background: #fedae3;
+}
+
+article span {
+	font-size: 0.8em;
+}
+
+p {
+	margin: 0 0 5px;
+}
+
+.meta {
+	font-size: 0.8em;
+	font-style: italic;
+	color: #888;
+}
+
+.links {
+	font-size: 1.8em;
+	line-height: 0.8em;
+	float: right;
+	margin: -10px 0 0;
+}
+
+.links a {
+	display: block;
+	text-decoration: none;
+}
+

@@ -1,0 +1,49 @@
+<hr />
+  <section id="add">
+    <form class="row" method="post" action="/">
+      <div>
+        <input autofocus name="task" class="form-control" type="text" placeholder="What do you need to do?" />
+        <input class="btn btn-primary btn-task" type="submit" value="Add" />
+      </div>
+    </form>
+  </section>
+<hr />
+
+  <%= '<section id="welcome" style=""><p>You probably have something you should be doing, I do too. So make a list and check it off.</p><p>Take care, toodooloo!</p><p><img src="/assets/img/wave_emoji.png" /></p></section>' if @todo == 0 && @complete.count == 0 %>
+
+  <section id="pending">
+    <%= "<h2 class='section-header'>To Do</h2>" if @todo >= 1  %>
+    <% @tasks.each do |task| %>
+      <% if task.complete then %>
+        <%= nil %>
+        <% else %>
+        <div class="task-list">
+          <span class="task"><%= task.task %></span>
+          <form action="/<%= task.id %>" method="post">
+        		<input type="hidden" name="_method" value="delete">
+            <button type="submit" class="fa fa-trash btn-delete"></button>
+        	</form>
+          <a class="btn-complete" href="/<%= task.id %>/complete"><i class="fa fa-square-o"></i></a>
+        </div>
+        <% end %>
+    <% end %>
+  </section>
+  <section id="complete">
+    <%= "<h2 class='section-header'>Done</h2>" if @complete.count >= 1 %>
+
+
+    <% @tasks.each do |task| %>
+    <% if task.complete then %>
+      <div class="task-list">
+        <span class="task"><%= task.task %></span>
+        <form action="/<%= task.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button type="submit" class="fa fa-trash btn-delete"></button>
+        </form>
+        <a class="btn-complete" href="/<%= task.id %>/complete"><i class="fa fa-check-square"></i></a>
+      </div>
+    <% else %>
+      <%= nil %>
+    <% end %>
+  <% end %>
+  </section>
